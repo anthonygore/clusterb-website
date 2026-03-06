@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Demon by Cluster B</title>
+    <meta name="title" content="Demon - Cluster B">
+    <meta name="description" content="New single 'Demon' out 13th March 2026. Pre-save now on Spotify.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clusterb.com/demon"> 
+    <meta property="og:title" content="Demon - Cluster B">
+    <meta property="og:description" content="New single 'Demon' out 13th March 2026. Pre-save now on Spotify.">
+    <meta property="og:image" content="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F11993936--8604CF64-F7C8-42CD-9719787A5FD82750--0--5651845--GeminiGeneratedImageydf67tydf67tydf6.png?fm=jpg&q=75&w=800&s=704b8fd184753249ee6ca665ab8b1caa">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Demon - Cluster B">
+    <meta property="twitter:description" content="New single 'Demon' out 13th March 2026. Pre-save now on Spotify.">
+    <meta property="twitter:image" content="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F11993936--8604CF64-F7C8-42CD-9719787A5FD82750--0--5651845--GeminiGeneratedImageydf67tydf67tydf6.png?fm=jpg&q=75&w=800&s=704b8fd184753249ee6ca665ab8b1caa">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #000000;
+            --card-bg: #222222;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --spotify-green: #1DB954;
+            --email-blue: #5bbad5;
+        }
+
+        * { box-sizing: border-box; }
+
+        body, html {
+            margin: 0; padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            display: flex; justify-content: center; min-height: 100vh;
+        }
+
+        .bg-blur {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F11993936--8604CF64-F7C8-42CD-9719787A5FD82750--0--5651845--GeminiGeneratedImageydf67tydf67tydf6.png?fm=jpg&q=75&w=800&s=704b8fd184753249ee6ca665ab8b1caa') no-repeat center center;
+            background-size: cover; filter: blur(60px) brightness(0.25); transform: scale(1.2); z-index: -1;
+        }
+
+        .container { width: 100%; max-width: 450px; padding: 100px 20px 40px 20px; display: flex; flex-direction: column; gap: 12px; }
+
+        .main-card { background-color: var(--card-bg); border-radius: 12px; padding: 0 30px 30px 30px; text-align: center; position: relative; margin-bottom: 8px; }
+
+        .artwork { width: 150px; height: 150px; border-radius: 12px; margin-top: -75px; box-shadow: 0 20px 50px rgba(0,0,0,0.9); object-fit: cover; border: 1px solid #333; }
+
+        h1 { font-size: 2.2rem; margin: 30px 0 10px 0; }
+        .artist-name { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 5px; }
+
+        .release-heading { font-size: 1.1rem; font-weight: 700; text-align: center; margin: 10px 0; letter-spacing: 0.5px; color: var(--text-primary); }
+
+        .info-card { background-color: var(--card-bg); border-radius: 12px; padding: 25px 30px; text-align: center; margin-top: 8px; }
+
+        .description { font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 0; }
+
+        .link-row {
+            background-color: var(--card-bg); border-radius: 8px; padding: 14px 18px;
+            display: flex; align-items: center; justify-content: space-between;
+            text-decoration: none; color: white; transition: background 0.2s; cursor: pointer; border: none; width: 100%;
+        }
+
+        .link-row:hover { background-color: #2e2e2e; }
+        .link-left { display: flex; align-items: center; gap: 15px; }
+
+        .platform-icon { width: 40px; height: 40px; border-radius: 4px; display: flex; align-items: center; justify-content: center; background-color: #000; }
+
+        .label-container { display: flex; flex-direction: column; text-align: left; }
+        .btn-label { font-weight: 600; font-size: 1.05rem; }
+        .checkbox-area { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--text-secondary); margin-top: 4px; }
+        .arrow { width: 7px; height: 7px; border-top: 2px solid #555; border-right: 2px solid #555; transform: rotate(45deg); margin-right: 5px; }
+
+        .social-row { display: flex; justify-content: center; gap: 30px; margin-top: 20px; }
+
+        /* Icon Service Styling */
+        .pure-social {
+            text-decoration: none; color: white; font-size: 24px; /* Controls size of icons */
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .pure-social:hover { transform: scale(1.2); opacity: 0.8; }
+
+        #emailModal {
+            display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.9); justify-content: center; align-items: center;
+        }
+
+        .modal-content { background-color: var(--card-bg); padding: 40px 30px; border-radius: 12px; width: 90%; max-width: 400px; text-align: center; }
+
+        .embeddable-buttondown-form input[type="email"] { width: 100%; padding: 12px; margin: 20px 0; border-radius: 4px; border: 1px solid #444; background: #111; color: white; }
+
+        .embeddable-buttondown-form input[type="submit"] { background-color: var(--email-blue); width: 100%; color: white; border: none; padding: 12px 30px; border-radius: 4px; font-weight: bold; cursor: pointer; }
+
+        .close-btn { color: #555; float: right; cursor: pointer; font-size: 28px; margin-top: -30px; }
+    </style>
+</head>
+<body>
+
+    <div class="bg-blur"></div>
+
+    <div class="container">
+        <div class="main-card">
+            <img src="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F11993936--8604CF64-F7C8-42CD-9719787A5FD82750--0--5651845--GeminiGeneratedImageydf67tydf67tydf6.png?fm=jpg&q=75&w=800&s=704b8fd184753249ee6ca665ab8b1caa" class="artwork" alt="Demon Cover Art">
+            <h1>Demon</h1>
+            <div class="artist-name">Cluster B</div>
+        </div>
+
+        <div class="release-heading">
+            New single <em>Demon</em> out 13th March 2026.
+        </div>
+
+        <a href="https://open.spotify.com" target="_blank" class="link-row">
+            <div class="link-left">
+                <div class="platform-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" width="26" alt="Spotify">
+                </div>
+                <div class="label-container">
+                    <span class="btn-label">Pre-Save on Spotify</span>
+                    <div class="checkbox-area">
+                        <input type="checkbox" checked onclick="event.stopPropagation()">
+                        <span>Share email address</span>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow"></div>
+        </a>
+
+        <button class="link-row" onclick="document.getElementById('emailModal').style.display='flex'">
+            <div class="link-left">
+                <div class="platform-icon" style="background-color: var(--email-blue);">
+                    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" width="22" style="filter: invert(1);" alt="Email">
+                </div>
+                <div class="label-container">
+                    <span class="btn-label">Notify by Email</span>
+                </div>
+            </div>
+            <div class="arrow"></div>
+        </button>
+
+        <div class="info-card">
+            <p class="description">
+                Cluster B is an alternative rock project by songwriter Anthony Gore.
+            </p>
+
+            <div class="social-row">
+                <a href="https://www.instagram.com/clusterbmusic" target="_blank" class="pure-social">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@Clusterbmusic" target="_blank" class="pure-social">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="emailModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="document.getElementById('emailModal').style.display='none'">×</span>
+            <form action="https://buttondown.com/api/emails/embed-subscribe/clusterb" method="post" class="embeddable-buttondown-form">
+                <label for="bd-email" style="font-weight:bold; font-size: 1.1rem; color:white;">Notify by Email</label>
+                <input type="email" name="email" id="bd-email" placeholder="Your email address" required />
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+    </div>
+
+    <script>
+        window.onclick = function(event) {
+            let modal = document.getElementById('emailModal');
+            if (event.target == modal) { modal.style.display = "none"; }
+        }
+    </script>
+
+</body>
+</html>

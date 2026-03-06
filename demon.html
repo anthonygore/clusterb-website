@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Demon by Cluster B</title>
     <meta name="title" content="Demon - Cluster B">
     <meta name="description" content="New single 'Demon' out 13th March 2026. Pre-save now on Spotify.">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://clusterb.com/demon"> 
+    <meta property="og:url" content="https://clusterb.com/demon">
     <meta property="og:title" content="Demon - Cluster B">
     <meta property="og:description" content="New single 'Demon' out 13th March 2026. Pre-save now on Spotify.">
     <meta property="og:image" content="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F11993936--8604CF64-F7C8-42CD-9719787A5FD82750--0--5651845--GeminiGeneratedImageydf67tydf67tydf6.png?fm=jpg&q=75&w=800&s=704b8fd184753249ee6ca665ab8b1caa">
@@ -56,7 +56,7 @@
         h1 { font-size: 2.2rem; margin: 30px 0 10px 0; }
         .artist-name { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 5px; }
 
-        .release-heading { font-size: 1.1rem; font-weight: 700; text-align: center; margin: 10px 0; letter-spacing: 0.5px; color: var(--text-primary); }
+        .release-heading { font-size: 1rem; font-weight: 700; text-align: center; margin: 10px 0 0; letter-spacing: 0.5px; color: var(--text-primary); }
 
         .info-card { background-color: var(--card-bg); border-radius: 12px; padding: 25px 30px; text-align: center; margin-top: 8px; }
 
@@ -88,18 +88,9 @@
 
         .pure-social:hover { transform: scale(1.2); opacity: 0.8; }
 
-        #emailModal {
-            display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.9); justify-content: center; align-items: center;
-        }
-
-        .modal-content { background-color: var(--card-bg); padding: 40px 30px; border-radius: 12px; width: 90%; max-width: 400px; text-align: center; }
-
-        .embeddable-buttondown-form input[type="email"] { width: 100%; padding: 12px; margin: 20px 0; border-radius: 4px; border: 1px solid #444; background: #111; color: white; }
+        .embeddable-buttondown-form input[type="email"] { width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #444; background: #111; color: white; }
 
         .embeddable-buttondown-form input[type="submit"] { background-color: var(--email-blue); width: 100%; color: white; border: none; padding: 12px 30px; border-radius: 4px; font-weight: bold; cursor: pointer; }
-
-        .close-btn { color: #555; float: right; cursor: pointer; font-size: 28px; margin-top: -30px; }
     </style>
 </head>
 <body>
@@ -114,36 +105,16 @@
         </div>
 
         <div class="release-heading">
-            New single <em>Demon</em> out 13th March 2026.
+            <p>New single <em>Demon</em> out 13th March 2026.</p>
+            <p>Sign up below to get the song when it drops!</p>
         </div>
 
-        <a href="https://open.spotify.com" target="_blank" class="link-row">
-            <div class="link-left">
-                <div class="platform-icon">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" width="26" alt="Spotify">
-                </div>
-                <div class="label-container">
-                    <span class="btn-label">Pre-Save on Spotify</span>
-                    <div class="checkbox-area">
-                        <input type="checkbox" checked onclick="event.stopPropagation()">
-                        <span>Share email address</span>
-                    </div>
-                </div>
-            </div>
-            <div class="arrow"></div>
-        </a>
-
-        <button class="link-row" onclick="document.getElementById('emailModal').style.display='flex'">
-            <div class="link-left">
-                <div class="platform-icon" style="background-color: var(--email-blue);">
-                    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" width="22" style="filter: invert(1);" alt="Email">
-                </div>
-                <div class="label-container">
-                    <span class="btn-label">Notify by Email</span>
-                </div>
-            </div>
-            <div class="arrow"></div>
-        </button>
+        <div class="info-card" style="text-align: left; padding: 30px 30px;">
+            <form action="https://buttondown.com/api/emails/embed-subscribe/clusterb" method="post" class="embeddable-buttondown-form">
+                <input type="email" name="email" id="bd-email" placeholder="Your email address" required />
+                <input type="submit" value="Notify Me" />
+            </form>
+        </div>
 
         <div class="info-card">
             <p class="description">
@@ -161,23 +132,6 @@
         </div>
     </div>
 
-    <div id="emailModal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="document.getElementById('emailModal').style.display='none'">×</span>
-            <form action="https://buttondown.com/api/emails/embed-subscribe/clusterb" method="post" class="embeddable-buttondown-form">
-                <label for="bd-email" style="font-weight:bold; font-size: 1.1rem; color:white;">Notify by Email</label>
-                <input type="email" name="email" id="bd-email" placeholder="Your email address" required />
-                <input type="submit" value="Submit" />
-            </form>
-        </div>
-    </div>
-
-    <script>
-        window.onclick = function(event) {
-            let modal = document.getElementById('emailModal');
-            if (event.target == modal) { modal.style.display = "none"; }
-        }
-    </script>
 
 </body>
 </html>

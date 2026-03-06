@@ -6,17 +6,17 @@
 
     <title>Demon by Cluster B</title>
     <meta name="title" content="Demon - Cluster B">
-    <meta name="description" content="New single 'Demon' out 13th March 2026. Pre-save now on Spotify.">
+    <meta name="description" content="New single out 13th March 2026.">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://clusterb.com/demon">
     <meta property="og:title" content="Demon - Cluster B">
-    <meta property="og:description" content="New single 'Demon' out 13th March 2026. Pre-save now on Spotify.">
+    <meta property="og:description" content="New single out 13th March 2026.">
     <meta property="og:image" content="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F11993936--8604CF64-F7C8-42CD-9719787A5FD82750--0--5651845--GeminiGeneratedImageydf67tydf67tydf6.png?fm=jpg&q=75&w=800&s=704b8fd184753249ee6ca665ab8b1caa">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Demon - Cluster B">
-    <meta property="twitter:description" content="New single 'Demon' out 13th March 2026. Pre-save now on Spotify.">
+    <meta property="twitter:description" content="New single out 13th March 2026.">
     <meta property="twitter:image" content="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F11993936--8604CF64-F7C8-42CD-9719787A5FD82750--0--5651845--GeminiGeneratedImageydf67tydf67tydf6.png?fm=jpg&q=75&w=800&s=704b8fd184753249ee6ca665ab8b1caa">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -88,9 +88,11 @@
 
         .pure-social:hover { transform: scale(1.2); opacity: 0.8; }
 
-        .embeddable-buttondown-form input[type="email"] { width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #444; background: #111; color: white; }
+        .embeddable-buttondown-form input[type="email"] { width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #444; background: #111; color: white; font-size: 1rem; }
 
-        .embeddable-buttondown-form input[type="submit"] { background-color: var(--email-blue); width: 100%; color: white; border: none; padding: 12px 30px; border-radius: 4px; font-weight: bold; cursor: pointer; }
+        .embeddable-buttondown-form input[type="submit"] { background-color: var(--email-blue); width: 100%; color: white; border: none; padding: 12px 30px; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 1rem; }
+
+        .subscription-message { text-align: center; font-weight: bold; color: #4caf72; margin: 0; }
     </style>
 </head>
 <body>
@@ -105,20 +107,20 @@
         </div>
 
         <div class="release-heading">
-            <p>New single <em>Demon</em> out 13th March 2026.</p>
-            <p>Sign up below to get the song when it drops!</p>
+            <p>New single out 13th March 2026.</p>
+            <p>Be the first to hear the song when it drops!</p>
         </div>
 
         <div class="info-card" style="text-align: left; padding: 30px 30px;">
             <form action="https://buttondown.com/api/emails/embed-subscribe/clusterb" method="post" class="embeddable-buttondown-form">
                 <input type="email" name="email" id="bd-email" placeholder="Your email address" required />
-                <input type="submit" value="Notify Me" />
+                <input type="submit" value="Send Me The Song" />
             </form>
         </div>
 
         <div class="info-card">
             <p class="description">
-                Cluster B is an alternative rock project by songwriter Anthony Gore.
+                Cluster B is an alternative rock project from songwriter Anthony Gore based in Sydney, Australia.
             </p>
 
             <div class="social-row">
@@ -132,6 +134,17 @@
         </div>
     </div>
 
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const form = document.querySelector('.embeddable-buttondown-form');
+        if (form) {
+            if (params.get('subscribed') === '1') {
+                form.replaceWith(Object.assign(document.createElement('p'), { className: 'subscription-message', textContent: 'Successfully subscribed.' }));
+            } else if (params.get('confirmed') === '1') {
+                form.replaceWith(Object.assign(document.createElement('p'), { className: 'subscription-message', textContent: 'Successfully confirmed.' }));
+            }
+        }
+    </script>
 
 </body>
 </html>

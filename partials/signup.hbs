@@ -1,0 +1,19 @@
+<div class="info-card" style="text-align: left; padding: 30px 30px;">
+    <form action="https://buttondown.com/api/emails/embed-subscribe/{{buttondownUser}}" method="post" class="embeddable-buttondown-form">
+        <label for="bd-email" class="sr-only">Your email address</label>
+        <input type="email" name="email" id="bd-email" placeholder="Your email address" required />
+        <input type="submit" value="Send Me The Song" />
+    </form>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const form = document.querySelector('.embeddable-buttondown-form');
+    if (form) {
+        if (params.has('subscribed')) {
+            form.replaceWith(Object.assign(document.createElement('p'), { className: 'subscription-message', textContent: 'Successfully subscribed.' }));
+        } else if (params.has('confirmed')) {
+            form.replaceWith(Object.assign(document.createElement('p'), { className: 'subscription-message', textContent: 'Successfully confirmed.' }));
+        }
+    }
+</script>

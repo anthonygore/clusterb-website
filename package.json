@@ -1,0 +1,26 @@
+{
+  "name": "clusterb.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonygore/clusterb-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthonygore/clusterb-website/issues"
+  },
+  "homepage": "https://github.com/anthonygore/clusterb-website#readme",
+  "devDependencies": {
+    "vite": "^7.3.1",
+    "vite-plugin-handlebars": "^2.0.0"
+  }
+}

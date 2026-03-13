@@ -23,7 +23,7 @@ const pageData = {
         artistName: 'Cluster B',
         releaseText: 'Listen on your favourite platform:',
         streamingLinks: [
-            { url: 'https://open.spotify.com/track/4U9Ze2hejIJlCRJ3kwamo1?si=9bf996d78f5c472b', title: 'Spotify', icon: 'https://distrokid.com/images/icons/spotify.png' },
+            { url: 'https://open.spotify.com/track/4U9Ze2hejIJlCRJ3kwamo1', title: 'Spotify', icon: 'https://distrokid.com/images/icons/spotify.png' },
             { url: 'https://music.apple.com/us/album/demon-single/1881917940?uo=4&app=music&at=1001lry3&ct=dashboard', title: 'Apple Music', icon: 'https://distrokid.com/images/icons/applemusic.png' },
             { url: 'https://music.apple.com/us/album/demon-single/1881917940?uo=4&app=itunes&at=1001lry3&ct=dashboard', title: 'iTunes', icon: 'https://distrokid.com/images/icons/itunes.png' },
         ],

@@ -21,7 +21,7 @@ const pageData = {
         ogImage: 'https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F11993936--8604CF64-F7C8-42CD-9719787A5FD82750--0--5651845--GeminiGeneratedImageydf67tydf67tydf6.png?fm=jpg&q=75&w=800&s=704b8fd184753249ee6ca665ab8b1caa',
         songTitle: 'Demon',
         artistName: 'Cluster B',
-        releaseText: 'Out now! Listen on your favourite platform.',
+        releaseText: 'Listen on your favourite platform:',
         streamingLinks: [
             { url: 'https://open.spotify.com/track/4U9Ze2hejIJlCRJ3kwamo1?si=9bf996d78f5c472b', title: 'Spotify', icon: 'https://distrokid.com/images/icons/spotify.png' },
             { url: 'https://music.apple.com/us/album/demon-single/1881917940?uo=4&app=music&at=1001lry3&ct=dashboard', title: 'Apple Music', icon: 'https://distrokid.com/images/icons/applemusic.png' },

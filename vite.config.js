@@ -24,6 +24,7 @@ const pageData = {
         releaseText: 'Listen on your favourite platform:',
         streamingLinks: [
             { url: 'https://open.spotify.com/track/4U9Ze2hejIJlCRJ3kwamo1', title: 'Spotify', icon: 'https://distrokid.com/images/icons/spotify.png' },
+            { url: 'https://www.youtube.com/watch?v=bmze0QRzLpI', title: 'Youtube', icon: 'https://distrokid.com/images/icons/youtube.png' },
             { url: 'https://music.apple.com/us/album/demon-single/1881917940?uo=4&app=music&at=1001lry3&ct=dashboard', title: 'Apple Music', icon: 'https://distrokid.com/images/icons/applemusic.png' },
             { url: 'https://music.apple.com/us/album/demon-single/1881917940?uo=4&app=itunes&at=1001lry3&ct=dashboard', title: 'iTunes', icon: 'https://distrokid.com/images/icons/itunes.png' },
         ],

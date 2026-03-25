@@ -1,6 +1,6 @@
 <div class="streaming-links">
     {{#each streamingLinks}}
-    <a href="{{url}}" target="_blank" rel="noopener noreferrer" class="streaming-card">
+    <a href="{{url}}"{{#if newTab}} target="_blank" rel="noopener noreferrer"{{/if}} class="streaming-card">
         <img src="{{icon}}" alt="{{title}} logo" class="streaming-logo">
         <span class="streaming-title">{{title}}</span>
         <i class="fa-solid fa-chevron-right streaming-chevron"></i>

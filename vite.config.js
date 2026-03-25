@@ -3,6 +3,19 @@ import handlebars from 'vite-plugin-handlebars'
 import { resolve } from 'path'
 
 const pageData = {
+    '/index.html': {
+        pageTitle: 'Cluster B - Home',
+        metaDescription: 'Cluster B - Home',
+        ogUrl: 'https://clusterb.com',
+        ogImage: 'https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F11993936--8604CF64-F7C8-42CD-9719787A5FD82750--0--5651845--GeminiGeneratedImageydf67tydf67tydf6.png?fm=jpg&q=75&w=800&s=704b8fd184753249ee6ca665ab8b1caa',
+        artistName: 'Cluster B',
+        description: 'New song DEMON out now',
+        buttondownUser: 'clusterb',
+        streamingLinks: [
+            { url: '/demon_launch.html', title: 'Listen to DEMON - Out Now', icon: 'https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F11993936--8604CF64-F7C8-42CD-9719787A5FD82750--0--5651845--GeminiGeneratedImageydf67tydf67tydf6.png?fm=jpg&q=75&w=800&s=704b8fd184753249ee6ca665ab8b1caa', newTab: false },
+        ],
+        signupButton: "Join Email List",
+    },
     '/demon.html': {
         pageTitle: 'Demon - Cluster B',
         metaDescription: 'New single out 13th March 2026.',
@@ -13,6 +26,7 @@ const pageData = {
         releaseText: 'New single out 13th March 2026.',
         callToAction: 'Be the first to hear the song when it drops!',
         buttondownUser: 'clusterb',
+        signupButton: "Send Me The Song",
     },
     '/demon_launch.html': {
         pageTitle: 'Demon - Cluster B',
